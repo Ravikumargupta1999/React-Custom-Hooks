@@ -12,6 +12,11 @@ export default function Reset() {
   },[]);
 
 
+  useEffect(() =>{
+    localStorage.setItem("email",email);
+  },[email])
+
+
   return (
     <>
       <h1>Reset Password for</h1>
