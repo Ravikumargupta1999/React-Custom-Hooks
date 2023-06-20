@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import '../../src/index.css'
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  useEffect(() =>{
+    localStorage.setItem("email",email);
+  },[email]);
 
   return (
     <>
